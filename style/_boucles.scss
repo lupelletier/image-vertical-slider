@@ -1,0 +1,65 @@
+//COLOR
+$colours: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "blue": $blue,
+    "orange": $orange,
+    "pink": $pink,
+    "gray": $gray,
+    "green": $green
+);
+
+@each $property, $value in $colours {
+    .bg-#{$property} {
+        background-color: $value;
+    }
+    .text-#{$property} {
+        color: $value;
+    }
+    .btn-bg-#{$property} {
+        background-color: $value;
+    }
+    .icon-#{$property} {
+        color: $value;
+    }
+}
+
+//WIDTH
+
+$widths: (
+    100-percent: 100%,
+    90-percent: 90%,
+    80-percent: 80%,
+    70-percent: 70%,
+    60-percent: 60%,
+    50-percent: 50%,
+    40-percent: 40%,
+    30-percent: 30%,
+    25-percent: 25%,
+    20-percent: 20%,
+
+);
+
+@each $width, $value in $widths {
+    .w-#{$width}{
+        width: $value;
+    }
+}
+
+
+//PICS
+
+$images: (
+    1: url("https://picsum.photos/5000/3333"),
+    2: url("https://picsum.photos/5000/3333"),
+    3: url("https://picsum.photos/id/456/5000/3333"),
+    4: url("https://picsum.photos/4000/2222"),
+);
+
+@each $image, $value in $images {
+    .bg-i-#{$image}{
+        background-image: $value;
+        background-size: cover;
+
+    }
+}
